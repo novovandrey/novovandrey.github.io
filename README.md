@@ -114,83 +114,37 @@ a:hover { text-decoration: underline; }
     <!-- About -->
     <section class="mb-12 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
       <h2 class="text-xl font-semibold mb-2">About</h2>
-      <p>Senior Java Developer with experience in high‑load systems: Java 21, Spring, Kafka, Kubernetes, Caffeine. Focus on latency optimization, cache design, and reliable integrations (IBM MQ, REST).</p>
+      <p>Senior Java Developer with an MSc in Computer Science and 10+ years’ experience
+in soŌware development, including 7+ years in capital-markets fintech. I specialize
+in designing and implemenƟng high-throughput, cloud-naƟve collateral
+management systems - most recently co-building a full rehypothecaƟon engine
+from scratch as part of a three-engineer team. My core strengths include Spring
+Boot microservices, KaŅa/Flink stream processing, Kubernetes deployments, and
+CI/CD automaƟon with Jenkins and Ansible. I’m equally comfortable in Kanban and
+Scrum teams of up to 10 engineers and thrive on simplifying complex workflows
+into resilient, single-JVM services.
+</p>
     </section>
-
-    <!-- Skills with interactive tooltips showing code samples -->
-    <section class="mb-12 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-      <h2 class="text-xl font-semibold mb-4">Skills</h2>
-      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        <li class="tooltip">
-          <button class="focus-ring w-full text-left px-4 py-3 rounded-xl border hover:border-black/40">Java 21 · Records/Concurrency</button>
-          <div class="tip bg-slate-900 text-slate-100 rounded-xl p-4 shadow-xl border border-slate-700 mt-2">
-            <div class="flex items-center justify-between gap-4 mb-2">
-              <span class="text-sm opacity-80">Example: virtual threads</span>
-              <button class="focus-ring text-xs px-2 py-1 rounded bg-slate-700" onclick="copyCode('code-java-virtual')">Copy</button>
-            </div>
-            <pre id="code-java-virtual" class="javadoc text-xs whitespace-pre-wrap">try (var scope = java.util.concurrent.StructuredTaskScope.ShutdownOnFailure.of()) {
-  var r1 = scope.fork(() -> serviceA.call());
-  var r2 = scope.fork(() -> serviceB.call());
-  scope.join();
-  return r1.result() + r2.result();
-}</pre>
-          </div>
-        </li>
-        <li class="tooltip">
-          <button class="focus-ring w-full text-left px-4 py-3 rounded-xl border hover:border-black/40">Spring Boot · Observability</button>
-          <div class="tip bg-slate-900 text-slate-100 rounded-xl p-4 shadow-xl border border-slate-700 mt-2">
-            <div class="flex items-center justify-between gap-4 mb-2">
-              <span class="text-sm opacity-80">Example: Micrometer + p95</span>
-              <button class="focus-ring text-xs px-2 py-1 rounded bg-slate-700" onclick="copyCode('code-spring-metrics')">Copy</button>
-            </div>
-            <pre id="code-spring-metrics" class="javadoc text-xs whitespace-pre-wrap">@Timed(value = "checkout.latency", percentile = {0.5, 0.95})
-public ResponseEntity&lt;Order&gt; checkout(...) { /* ... */ }</pre>
-          </div>
-        </li>
-        <li class="tooltip">
-          <button class="focus-ring w-full text-left px-4 py-3 rounded-xl border hover:border-black/40">Kafka · Exactly‑once / Retry</button>
-          <div class="tip bg-slate-900 text-slate-100 rounded-xl p-4 shadow-xl border border-slate-700 mt-2">
-            <div class="flex items-center justify-between gap-4 mb-2">
-              <span class="text-sm opacity-80">Example: producer idempotence</span>
-              <button class="focus-ring text-xs px-2 py-1 rounded bg-slate-700" onclick="copyCode('code-kafka-ido')">Copy</button>
-            </div>
-            <pre id="code-kafka-ido" class="javadoc text-xs whitespace-pre-wrap">props.put("enable.idempotence", true);
-props.put("acks", "all");
-props.put("max.in.flight.requests.per.connection", 1);</pre>
-          </div>
-        </li>
-        <li class="tooltip">
-          <button class="focus-ring w-full text-left px-4 py-3 rounded-xl border hover:border-black/40">Caffeine Cache · Tuning</button>
-          <div class="tip bg-slate-900 text-slate-100 rounded-xl p-4 shadow-xl border border-slate-700 mt-2">
-            <div class="flex items-center justify-between gap-4 mb-2">
-              <span class="text-sm opacity-80">Example: p95‑latency drop</span>
-              <button class="focus-ring text-xs px-2 py-1 rounded bg-slate-700" onclick="copyCode('code-caffeine')">Copy</button>
-            </div>
-            <pre id="code-caffeine" class="javadoc text-xs whitespace-pre-wrap">Cache&lt;Key, Val&gt; cache = Caffeine.newBuilder()
-  .maximumSize(100_000)
-  .recordStats()
-  .expireAfterWrite(Duration.ofMinutes(5))
-  .build(loader);
-var stats = cache.stats(); // hitRate, evictionCount, etc.</pre>
-          </div>
-        </li>
-        <li class="tooltip">
-          <button class="focus-ring w-full text-left px-4 py-3 rounded-xl border hover:border-black/40">Kubernetes · GitOps</button>
-          <div class="tip bg-slate-900 text-slate-100 rounded-xl p-4 shadow-xl border border-slate-700 mt-2">
-            <div class="flex items-center justify-between gap-4 mb-2">
-              <span class="text-sm opacity-80">Example: liveness/startup</span>
-              <button class="focus-ring text-xs px-2 py-1 rounded bg-slate-700" onclick="copyCode('code-k8s')">Copy</button>
-            </div>
-            <pre id="code-k8s" class="javadoc text-xs whitespace-pre-wrap">livenessProbe:
-  httpGet: { path: /actuator/health/liveness, port: 8080 }
-startupProbe:
-  httpGet: { path: /actuator/health/startup, port: 8080 }
-  failureThreshold: 30
-  periodSeconds: 10</pre>
-          </div>
-        </li>
-      </ul>
-    </section>
+<section class="mb-12 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+<h2 class="text-xl font-semibold mb-4">Skills</h2>
+<ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<li>
+<div class="w-full px-4 py-3 rounded-xl border">Java 21 · Records/Concurrency</div>
+</li>
+<li>
+<div class="w-full px-4 py-3 rounded-xl border">Spring Boot · Observability</div>
+</li>
+<li>
+<div class="w-full px-4 py-3 rounded-xl border">Kafka · Exactly‑once / Retry</div>
+</li>
+<li>
+<div class="w-full px-4 py-3 rounded-xl border">Caffeine Cache · Tuning</div>
+</li>
+<li>
+<div class="w-full px-4 py-3 rounded-xl border">Kubernetes · GitOps</div>
+</li>
+</ul>
+</section>
 
     <!-- Experience as Javadoc -->
     <section class="mb-12">
@@ -229,9 +183,8 @@ startupProbe:
       <h2 class="text-xl font-semibold mb-4">Projects</h2>
       <ul class="space-y-4 pl-6 relative tree">
         <li>
-          <div class="font-mono text-sm">dev.novov.projects.<span class="font-semibold">RehypoViewer</span></div>
-          <div class="mt-1 text-sm text-gray-700">Class: <span class="font-mono">RehypoViewer</span> — web app for data visualization; <span class="font-mono">public void optimize()</span> reduces rendering overhead.</div>
-          <div class="mt-2"><a class="underline" href="#">Source</a> · <a class="underline" href="#">Demo</a></div>
+          <div class="font-mono text-sm">dev.novov.projects.<span class="font-semibold">DatasetViewer</span></div>
+          <div class="mt-1 text-sm text-gray-700">Class: <span class="font-mono">reju</span> — web app for data visualization; <span class="font-mono">public void optimize()</span> reduces rendering overhead.</div>
         </li>
         <li>
           <div class="font-mono text-sm">dev.novov.projects.<span class="font-semibold">KafkaPipelines</span></div>
