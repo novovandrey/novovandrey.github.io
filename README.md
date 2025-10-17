@@ -115,12 +115,12 @@ a:hover { text-decoration: underline; }
     <section class="mb-12 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
       <h2 class="text-xl font-semibold mb-2">About</h2>
       <p>Senior Java Developer with an MSc in Computer Science and 10+ years’ experience
-in soŌware development, including 7+ years in capital-markets fintech. I specialize
-in designing and implemenƟng high-throughput, cloud-naƟve collateral
-management systems - most recently co-building a full rehypothecaƟon engine
+in software development, including 7+ years in capital-markets fintech. I specialize
+in designing and implementing high-throughput, cloud-native collateral
+management systems - most recently co-building a full rehypothecation engine
 from scratch as part of a three-engineer team. My core strengths include Spring
-Boot microservices, KaŅa/Flink stream processing, Kubernetes deployments, and
-CI/CD automaƟon with Jenkins and Ansible. I’m equally comfortable in Kanban and
+Boot microservices, Kafka/Flink stream processing, Kubernetes deployments, and
+CI/CD automation with Jenkins and Ansible. I’m equally comfortable in Kanban and
 Scrum teams of up to 10 engineers and thrive on simplifying complex workflows
 into resilient, single-JVM services.
 </p>
