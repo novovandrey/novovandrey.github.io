@@ -115,7 +115,7 @@ a:hover { text-decoration: underline; }
     <section class="mb-12 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
       <h2 class="text-xl font-semibold mb-2">About</h2>
       <p>Senior Java Developer with an MSc in Computer Science and 10+ years’ experience
-in software development, including 7+ years in capital-markets fintech. I specialize
+in software development, including 5+ years in capital-markets fintech. I specialize
 in designing and implementing high-throughput, cloud-native collateral
 management systems - most recently co-building a full rehypothecation engine
 from scratch as part of a three-engineer team. My core strengths include Spring
@@ -152,7 +152,7 @@ into resilient, single-JVM services.
       <div class="grid gap-4">
         <article class="code-card rounded-2xl p-5">
           <pre class="javadoc text-sm whitespace-pre-wrap"><span class="cm">/**</span>
-<span class="ann"> * @Description</span>  High‑load API optimization (‑35% p95 latency)
+<span class="ann"> * @Description</span>  Working on a Prime-Broker Collateral platform 
 <span class="ann"> * @Role</span>         Senior Java Developer
 <span class="ann"> * @Stack</span>        Java 21, Spring, Kafka, Caffeine, Kubernetes
 <span class="cm"> */</span>
@@ -164,8 +164,8 @@ into resilient, single-JVM services.
         </article>
         <article class="code-card rounded-2xl p-5">
           <pre class="javadoc text-sm whitespace-pre-wrap"><span class="cm">/**</span>
-<span class="ann"> * @Description</span>  IBM MQ + REST integrations with two SSL contexts
-<span class="ann"> * @Role</span>         Senior Java Developer
+<span class="ann"> * @Description</span>  B2B Java application for POS stores for Deutsche Telekom
+<span class="ann"> * @Role</span>         Java Developer
 <span class="ann"> * @Stack</span>        Spring, IBM MQ, TLS, Observability
 <span class="cm"> */</span>
 <span class="kw">public class</span> <span class="type"></span> {
