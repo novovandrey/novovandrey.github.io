@@ -70,6 +70,7 @@ a:hover { text-decoration: underline; }
       </div>
       <div class="flex flex-wrap gap-3">
         <a class="focus-ring px-4 py-2 rounded-2xl bg-black/80 text-white hover:bg-black" href="/cv.pdf">Download PDF</a>
+        <a class="focus-ring px-4 py-2 rounded-2xl bg-white text-slate-900 border border-slate-300 hover:bg-slate-50" href="/engineering-notes/">Engineering Notes</a>
         <a class="focus-ring px-4 py-2 rounded-2xl bg-white text-slate-900 border border-slate-300 hover:bg-slate-50" href="https://github.com/novovandrey">GitHub</a>
         <a class="focus-ring px-4 py-2 rounded-2xl bg-white text-slate-900 border border-slate-300 hover:bg-slate-50" href="https://www.linkedin.com/in/andrei-novov-841b99b1/">LinkedIn</a>
       </div>

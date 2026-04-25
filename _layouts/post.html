@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="site-title" href="{{ '/' | relative_url }}">Andrey Novov</a>
+
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/engineering-notes/' | relative_url }}">Engineering Notes</a>
+        <a href="{{ '/cv.pdf' | relative_url }}">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <article class="post">
+      <a class="back-link" href="{{ '/engineering-notes/' | relative_url }}">← Back to Engineering Notes</a>
+
+      <header class="post-header">
+        <p class="eyebrow">Engineering Notes</p>
+        <h1>{{ page.title }}</h1>
+
+        <div class="note-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date: "%B %d, %Y" }}
+          </time>
+
+          {% if page.tags %}
+            <span>·</span>
+            <span>{{ page.tags | join: ", " }}</span>
+          {% endif %}
+        </div>
+
+        {% if page.description %}
+          <p class="post-description">{{ page.description }}</p>
+        {% endif %}
+      </header>
+
+      <div class="post-content">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ site.time | date: "%Y" }} Andrey Novov</p>
+    </div>
+  </footer>
+</body>
+</html>
